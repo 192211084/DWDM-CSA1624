@@ -1,0 +1,51 @@
+> exam<-c(55,60,71,63,55,65,50,58,59,61,63,65,67,72,75)
+> groups<-c('a','a','a','a','a','b','b','b','b','b','c','c','c','c','c')
+> split(x=exam,f=groups)
+$a
+[1] 55 60 71 63 55
+
+$b
+[1] 65 50 58 59 61
+
+$c
+[1] 63 65 67 72 75
+
+> max_val<-max(exam)
+> min_val<-min(exam)
+> width<-max_val-min_val
+> width1<-width/3
+> print(width1)
+[1] 8.333333
+> bin1=width1+min_val
+> bin2=2*width1+min_val
+> bin3=3*width1+min_val
+> b1=c()
+> b2=c()
+> b3=c()
+> for (i in exam)
++ {
++     if(i<bin1)
++     {
++         b1=append(b1,i)
++     }
++     else if(i<bin2)
++     {
++         b2=append(b2,i)
++     }
++     else
++     {
++         b3=append(b3,i)
++     }
++ }
+> print("1stbin")
+[1] "1stbin"
+> print(b1)
+[1] 55 55 50 58
+> print("2nd bin")
+[1] "2nd bin"
+> print(b2)
+[1] 60 63 65 59 61 63 65
+> print("3rd bin")
+[1] "3rd bin"
+> print(b3)
+[1] 71 67 72 75
