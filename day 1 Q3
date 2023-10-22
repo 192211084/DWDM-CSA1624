@@ -1,0 +1,30 @@
+> #min_max
+> data1<-c(200,300,400,600,1000)
+> min_val<-min(data1)
+> max_val<-max(data1)
+> for (i in data1)
++ {
++     result1<-i-min_val
++     result2<-max_val-min_val
++     result3<-result1/result2
++     print(result3)
++ }
+[1] 0
+[1] 0.125
+[1] 0.25
+[1] 0.5
+[1] 1
+> #z_score
+> mean<-mean(data1)
+> standard_deviation<-sd(data1)
+> for (i in data1)
++ {
++     result1<-i-mean
++     result2<-result1/standard_deviation
++     print(result2)
++ }
+[1] -0.9486833
+[1] -0.6324555
+[1] -0.3162278
+[1] 0.3162278
+[1] 1.581139
